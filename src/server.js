@@ -25,7 +25,7 @@ const schema = makeExecutableSchema({
     resolvers,
 });
 
-app.get('/', function(req, res){
+app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
@@ -38,8 +38,8 @@ app.use('/graphql/', graphqlHTTP((request) => {
     }
 }));
 
-function parseCookies (cookies) {
-    if (cookies == null){
+function parseCookies(cookies) {
+    if (cookies == null) {
         return;
     } else {
         let result = {};
@@ -56,4 +56,4 @@ function parseCookies (cookies) {
 
 app.listen(port);
 
-console.log('GraphQL API server running on port:'+ port);
+console.log('GraphQL API server running on port:' + port);
